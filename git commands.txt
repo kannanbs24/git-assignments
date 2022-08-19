@@ -1,0 +1,282 @@
+
+kanna@DESKTOP-LUAVTH3 MINGW64 /e/ass-4
+$ git init
+Initialized empty Git repository in E:/ass-4/.git/
+
+kanna@DESKTOP-LUAVTH3 MINGW64 /e/ass-4 (master)
+$ git clone https://github.com/kannanbs24/gitdemo.git
+Cloning into 'gitdemo'...
+remote: Enumerating objects: 54, done.
+remote: Counting objects: 100% (54/54), done.
+remote: Compressing objects: 100% (34/34), done.
+remote: Total 54 (delta 4), reused 45 (delta 4), pack-reused 0
+Receiving objects: 100% (54/54), 14.93 KiB | 2.13 MiB/s, done.
+Resolving deltas: 100% (4/4), done.
+
+kanna@DESKTOP-LUAVTH3 MINGW64 /e/ass-4 (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        gitdemo/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+kanna@DESKTOP-LUAVTH3 MINGW64 /e/ass-4 (master)
+$ cd gitDemo
+
+kanna@DESKTOP-LUAVTH3 MINGW64 /e/ass-4/gitDemo (main)
+$ git branch
+* main
+
+kanna@DESKTOP-LUAVTH3 MINGW64 /e/ass-4/gitDemo (main)
+$ dir
+README.md  welcome.txt
+
+kanna@DESKTOP-LUAVTH3 MINGW64 /e/ass-4/gitDemo (main)
+$ git branch gitwork
+
+kanna@DESKTOP-LUAVTH3 MINGW64 /e/ass-4/gitDemo (main)
+$ git branch
+  gitwork
+* main
+
+kanna@DESKTOP-LUAVTH3 MINGW64 /e/ass-4/gitDemo (main)
+$ git checkout gitwork
+Switched to branch 'gitwork'
+
+kanna@DESKTOP-LUAVTH3 MINGW64 /e/ass-4/gitDemo (gitwork)
+$ dir
+README.md  welcome.txt
+
+kanna@DESKTOP-LUAVTH3 MINGW64 /e/ass-4/gitDemo (gitwork)
+$ touch hello.xml
+
+kanna@DESKTOP-LUAVTH3 MINGW64 /e/ass-4/gitDemo (gitwork)
+$ dir
+README.md  hello.xml  welcome.txt
+
+kanna@DESKTOP-LUAVTH3 MINGW64 /e/ass-4/gitDemo (gitwork)
+$ cat hello.xml
+
+kanna@DESKTOP-LUAVTH3 MINGW64 /e/ass-4/gitDemo (gitwork)
+$ notepad hello.xml
+
+kanna@DESKTOP-LUAVTH3 MINGW64 /e/ass-4/gitDemo (gitwork)
+$ git status
+On branch gitwork
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        hello.xml
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+kanna@DESKTOP-LUAVTH3 MINGW64 /e/ass-4/gitDemo (gitwork)
+$ git add .
+
+kanna@DESKTOP-LUAVTH3 MINGW64 /e/ass-4/gitDemo (gitwork)
+$ git commit -m "commit the chnages"
+[gitwork 3ac427b] commit the chnages
+ 1 file changed, 1 insertion(+)
+ create mode 100644 hello.xml
+
+kanna@DESKTOP-LUAVTH3 MINGW64 /e/ass-4/gitDemo (gitwork)
+$ git status
+On branch gitwork
+nothing to commit, working tree clean
+
+kanna@DESKTOP-LUAVTH3 MINGW64 /e/ass-4/gitDemo (gitwork)
+$ git checlout master
+git: 'checlout' is not a git command. See 'git --help'.
+
+The most similar command is
+        checkout
+
+kanna@DESKTOP-LUAVTH3 MINGW64 /e/ass-4/gitDemo (gitwork)
+$ git checkout master
+error: pathspec 'master' did not match any file(s) known to git
+
+kanna@DESKTOP-LUAVTH3 MINGW64 /e/ass-4/gitDemo (gitwork)
+$ git checkout master
+error: pathspec 'master' did not match any file(s) known to git
+
+kanna@DESKTOP-LUAVTH3 MINGW64 /e/ass-4/gitDemo (gitwork)
+$ git checkout -f master
+error: pathspec 'master' did not match any file(s) known to git
+
+kanna@DESKTOP-LUAVTH3 MINGW64 /e/ass-4/gitDemo (gitwork)
+$ git checkout -f main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+kanna@DESKTOP-LUAVTH3 MINGW64 /e/ass-4/gitDemo (main)
+$ touch hello.xml
+
+kanna@DESKTOP-LUAVTH3 MINGW64 /e/ass-4/gitDemo (main)
+$ cat hello.xml
+
+kanna@DESKTOP-LUAVTH3 MINGW64 /e/ass-4/gitDemo (main)
+$ notepad hello.xml
+
+kanna@DESKTOP-LUAVTH3 MINGW64 /e/ass-4/gitDemo (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        hello.xml
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+kanna@DESKTOP-LUAVTH3 MINGW64 /e/ass-4/gitDemo (main)
+$ git add .
+
+kanna@DESKTOP-LUAVTH3 MINGW64 /e/ass-4/gitDemo (main)
+$ git commit - "commit in main"
+error: pathspec '-' did not match any file(s) known to git
+error: pathspec 'commit in main' did not match any file(s) known to git
+
+kanna@DESKTOP-LUAVTH3 MINGW64 /e/ass-4/gitDemo (main)
+$ git commit -m "commit in main"
+[main b92d3bc] commit in main
+ 1 file changed, 1 insertion(+)
+ create mode 100644 hello.xml
+
+kanna@DESKTOP-LUAVTH3 MINGW64 /e/ass-4/gitDemo (main)
+$ git log --oneline --graph --decorate  --all
+* b92d3bc (HEAD -> main) commit in main
+| * 3ac427b (gitwork) commit the chnages
+|/
+| * dad3c7d (origin/sign) message here
+| * eb0edd3 hello
+| * 5b96c11 your message
+| * 2a47c0e (origin/login) hello
+|/
+* abed566 (origin/main, origin/HEAD) update
+* 27015ae updateddd
+* 658effe first commit
+* 139d893 hello kannan hi how are you
+* 65ca6e9 first commit
+* 908b4ae first commit
+* d30e74f added README.md
+
+kanna@DESKTOP-LUAVTH3 MINGW64 /e/ass-4/gitDemo (main)
+$ dif main..gitwork
+bash: dif: command not found
+
+kanna@DESKTOP-LUAVTH3 MINGW64 /e/ass-4/gitDemo (main)
+$ git dif main..gitwork
+git: 'dif' is not a git command. See 'git --help'.
+
+The most similar commands are
+        diff
+        config
+        difftool
+        init
+
+kanna@DESKTOP-LUAVTH3 MINGW64 /e/ass-4/gitDemo (main)
+$ git diff main..gitwork
+diff --git a/hello.xml b/hello.xml
+index f7c698b..6004a6e 100644
+--- a/hello.xml
++++ b/hello.xml
+@@ -1 +1 @@
+-hello welcome to assignment 4
+\ No newline at end of file
++welcome to the assignment 4
+\ No newline at end of file
+
+kanna@DESKTOP-LUAVTH3 MINGW64 /e/ass-4/gitDemo (main)
+$ git merge gitwork
+Auto-merging hello.xml
+CONFLICT (add/add): Merge conflict in hello.xml
+Automatic merge failed; fix conflicts and then commit the result.
+
+kanna@DESKTOP-LUAVTH3 MINGW64 /e/ass-4/gitDemo (main|MERGING)
+$ git diff main..gitwork
+diff --git a/hello.xml b/hello.xml
+index f7c698b..6004a6e 100644
+--- a/hello.xml
++++ b/hello.xml
+@@ -1 +1 @@
+-hello welcome to assignment 4
+\ No newline at end of file
++welcome to the assignment 4
+\ No newline at end of file
+
+kanna@DESKTOP-LUAVTH3 MINGW64 /e/ass-4/gitDemo (main|MERGING)
+$  git log --oneline --graph --decorate  --all
+* b92d3bc (HEAD -> main) commit in main
+| * 3ac427b (gitwork) commit the chnages
+|/
+| * dad3c7d (origin/sign) message here
+| * eb0edd3 hello
+| * 5b96c11 your message
+| * 2a47c0e (origin/login) hello
+|/
+* abed566 (origin/main, origin/HEAD) update
+* 27015ae updateddd
+* 658effe first commit
+* 139d893 hello kannan hi how are you
+* 65ca6e9 first commit
+* 908b4ae first commit
+* d30e74f added README.md
+
+kanna@DESKTOP-LUAVTH3 MINGW64 /e/ass-4/gitDemo (main|MERGING)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both added:      hello.xml
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+kanna@DESKTOP-LUAVTH3 MINGW64 /e/ass-4/gitDemo (main|MERGING)
+$ git merge --abort
+
+kanna@DESKTOP-LUAVTH3 MINGW64 /e/ass-4/gitDemo (main)
+$ git merge gitwork
+Auto-merging hello.xml
+CONFLICT (add/add): Merge conflict in hello.xml
+Automatic merge failed; fix conflicts and then commit the result.
+
+kanna@DESKTOP-LUAVTH3 MINGW64 /e/ass-4/gitDemo (main|MERGING)
+$ cat hello.xml
+<<<<<<< HEAD
+hello welcome to assignment 4
+=======
+welcome to the assignment 4
+>>>>>>> gitwork
+
+kanna@DESKTOP-LUAVTH3 MINGW64 /e/ass-4/gitDemo (main|MERGING)
+$ git add .
+
+kanna@DESKTOP-LUAVTH3 MINGW64 /e/ass-4/gitDemo (main|MERGING)
+$ git commit -m "merge and resolved the conflict hello.txt"
+[main a4f9ea1] merge and resolved the conflict hello.txt
+
+kanna@DESKTOP-LUAVTH3 MINGW64 /e/ass-4/gitDemo (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 3 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+kanna@DESKTOP-LUAVTH3 MINGW64 /e/ass-4/gitDemo (main)
+$ git merge gitwork
+Already up to date.
+
+kanna@DESKTOP-LUAVTH3 MINGW64 /e/ass-4/gitDemo (main)
+$
