@@ -1,0 +1,24 @@
+
+$ git version
+$ git config --global user.name "kannan"
+$ git config --global user.email "kannanbsk1609080@gmail.com"
+$ git config --global --list
+$ notepad++
+$ notepad++.exe bash -profile
+$ git config --global core.editor "notepad++.exe -multiInst - nosession"
+$ git config --global -e
+$ git init gitdemo
+$ ls -al
+$ echo "welcome all">>welcome.txt
+$ ls -all
+$ cat welcome.txt
+$ git status
+$ git add welcome.txt
+$ git commit
+$ git status
+$ git remote add origin https://github.com/kannanbs24/helo.git
+$ git remote -v
+
+$ git remote set-url origin https://github.com/kannanbs24/kannan.git
+$ git push -u origin main
+$ git pull origin main

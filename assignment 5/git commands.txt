@@ -1,0 +1,64 @@
+
+kanna@DESKTOP-LUAVTH3 MINGW64 /e/assi5 (master)
+$ touch .assi.txt
+
+kanna@DESKTOP-LUAVTH3 MINGW64 /e/assi5 (master)
+$ start notepad assi.txt
+
+kanna@DESKTOP-LUAVTH3 MINGW64 /e/assi5 (master)
+$ add .
+bash: add: command not found
+
+kanna@DESKTOP-LUAVTH3 MINGW64 /e/assi5 (master)
+$ git add .
+
+kanna@DESKTOP-LUAVTH3 MINGW64 /e/assi5 (master)
+$ git commit -m "add a assi file"
+[master 284500e] add a assi file
+ 3 files changed, 2 insertions(+)
+ create mode 100644 .assi.txt
+ create mode 100644 assi.txt
+
+kanna@DESKTOP-LUAVTH3 MINGW64 /e/assi5 (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+kanna@DESKTOP-LUAVTH3 MINGW64 /e/assi5 (master)
+$ git push -u origin master
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (4/4), 399 bytes | 399.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/kannanbs24/gitdemo.git
+   e5a7daf..284500e  master -> master
+branch 'master' set up to track 'origin/master'.
+
+kanna@DESKTOP-LUAVTH3 MINGW64 /e/assi5 (master)
+$ git pull  origin master
+From https://github.com/kannanbs24/gitdemo
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+
+kanna@DESKTOP-LUAVTH3 MINGW64 /e/assi5 (master)
+$ git pull  origin master
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 650 bytes | 2.00 KiB/s, done.
+From https://github.com/kannanbs24/gitdemo
+ * branch            master     -> FETCH_HEAD
+   284500e..7fe6f9b  master     -> origin/master
+Updating 284500e..7fe6f9b
+Fast-forward
+ assi.txt | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+kanna@DESKTOP-LUAVTH3 MINGW64 /e/assi5 (master)
+$

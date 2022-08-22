@@ -1,0 +1,21 @@
+branching
+----------- 
+$ git branch
+
+$ git status
+$ git touch newfile.cs
+$ git add .
+
+$ git commit -m "hello"
+$ git push origin sign
+$ git checkout master
+
+merging
+----------------------
+
+$ git checkout master
+$ git diff master..sign
+$ git merge sign
+$ git diff master..sign
+$ git log --oneline --decorate --graph
+$ Git branch -d sign
